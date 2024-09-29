@@ -17,7 +17,7 @@ Install with any plugin manager, [lush](https://github.com/rktjmp/lush.nvim) is 
 Example with [packer.nvim](https://github.com/wbthomason/packer.nvim):
 ```lua
 use {
-    'chris-montero/LateForLunchColorscheme',
+    'chris-montero/LateForLunch-nvim',
     requires = {'rktjmp/lush.nvim'}
 }
 ```
