@@ -90,83 +90,86 @@ local function modified()
     end
 end
 
-return {
-    options = {
-        theme = theme,
-        component_separators = '',
-        section_separators = { left = '', right = '' },
-    },
-    sections = {
-        lualine_a = { 'mode' },
-        lualine_b = {
-          -- { 'filename', file_status = false, path = 1 },
-            'branch',
-        },
-        lualine_c = {
-            { 
-                'diff',
-                diff_color = {
-                    added = { fg = green1 },
-                    modified = { fg = yellow1 },
-                    removed = { fg = red1 },
-                },
-            },
-            {
-                'diagnostics',
-                source = { 'nvim' },
-                sections = { 'error' },
-                diagnostics_color = { error = { bg = red1, fg = fg1 } },
-            },
-            {
-                'diagnostics',
-                source = { 'nvim' },
-                sections = { 'warn' },
-                diagnostics_color = { warn = { bg = orange3, fg = fg1 } },
-            },
-            {
-                '%w',
-                cond = function()
-                    return vim.wo.previewwindow
-                end,
-            },
-            {
-                '%r',
-                cond = function()
-                    return vim.bo.readonly
-                end,
-            },
-            {
-                '%q',
-                cond = function()
-                    return vim.bo.buftype == 'quickfix'
-                end,
-            },
-        },
-        lualine_x = { 
-            { 
-                '%l:%c',
-                separator = { 
-                    left = "",
-                },
-            }, 
-            '%p%%/%L',
-        },
-        lualine_y = {
-            {
-                'filetype',
-                icons_enabled = false
-            }
-        },
-        lualine_z = {
-            { -- TODO: figure out how to put a simple '' separator before this ONLY when it is active.
-            -- TODO: figure out how to make this change bg color when a file is modified vs whether it is modifiable
-                modified,
-                color = { bg = yellow1, fg = fg1 },
-            }
-        },
-    },
-    inactive_sections = {
-        lualine_c = { '%f %y %m' },
-        -- lualine_x = {},
-    },
-}
+-- return {
+--     options = {
+--         theme = theme,
+--         component_separators = '',
+--         section_separators = { left = '', right = '' },
+--     },
+--     sections = {
+--         lualine_a = { 'mode' },
+--         lualine_b = {
+--           -- { 'filename', file_status = false, path = 1 },
+--             'branch',
+--         },
+--         lualine_c = {
+--             { 
+--                 'diff',
+--                 diff_color = {
+--                     added = { fg = green1 },
+--                     modified = { fg = yellow1 },
+--                     removed = { fg = red1 },
+--                 },
+--             },
+--             {
+--                 'diagnostics',
+--                 source = { 'nvim' },
+--                 sections = { 'error' },
+--                 diagnostics_color = { error = { bg = red1, fg = fg1 } },
+--             },
+--             {
+--                 'diagnostics',
+--                 source = { 'nvim' },
+--                 sections = { 'warn' },
+--                 diagnostics_color = { warn = { bg = orange3, fg = fg1 } },
+--             },
+--             {
+--                 '%w',
+--                 cond = function()
+--                     return vim.wo.previewwindow
+--                 end,
+--             },
+--             {
+--                 '%r',
+--                 cond = function()
+--                     return vim.bo.readonly
+--                 end,
+--             },
+--             {
+--                 '%q',
+--                 cond = function()
+--                     return vim.bo.buftype == 'quickfix'
+--                 end,
+--             },
+--         },
+--         lualine_x = { 
+--             { 
+--                 '%l:%c',
+--                 separator = { 
+--                     left = "",
+--                 },
+--             }, 
+--             '%p%%/%L',
+--         },
+--         lualine_y = {
+--             {
+--                 'filetype',
+--                 icons_enabled = false
+--             }
+--         },
+--         lualine_z = {
+--             { -- TODO: figure out how to put a simple '' separator before this ONLY when it is active.
+--             -- TODO: figure out how to make this change bg color when a file is modified vs whether it is modifiable
+--                 modified,
+--                 color = { bg = yellow1, fg = fg1 },
+--             }
+--         },
+--     },
+--     inactive_sections = {
+--         lualine_c = { '%f %y %m' },
+--         -- lualine_x = {},
+--     },
+-- }
+
+return theme
+
