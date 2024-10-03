@@ -56,7 +56,7 @@ return {
     dark_bg = bg.da(14),
     bg2 = bg.li(8).saturate(12),
     bg3 = bg.li(20).saturate(34),
-    -- bg4 = bg.li(8),
+    bg4 = bg.li(2).saturate(1),
 
     basic_red = color6,
     basic_orange = color3,

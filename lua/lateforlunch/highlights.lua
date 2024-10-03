@@ -25,7 +25,7 @@ return function(colors)
             CursorLine   {
                 bg = (config.transparent_background.enabled
                     and config.transparent_background.cursor_line and 'NONE')
-                    or colors.bg3
+                    or colors.bg4
             }, -- Screen-line at the cursor, when 'cursorline' is set. Low-priority if foreground (ctermfg OR guifg) is not set.
             Directory    { fg = colors.blue }, -- Directory names (and other special names in listings)
             DiffAdd      { bg = colors.green.mix(colors.bg, 85).saturate(12)}, -- Diff mode: Added line |diff.txt|

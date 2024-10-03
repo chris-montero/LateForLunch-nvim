@@ -16,10 +16,12 @@ Made with [lush](https://github.com/rktjmp/lush.nvim)
 Install with any plugin manager, [lush](https://github.com/rktjmp/lush.nvim) is required.
 Example with [packer.nvim](https://github.com/wbthomason/packer.nvim):
 ```lua
-use {
+use({
     'chris-montero/LateForLunch-nvim',
     requires = {'rktjmp/lush.nvim'}
-}
+})
+
+vim.cmd("colorscheme lateforlunch")
 ```
 
 ## Configuration
@@ -68,10 +70,10 @@ require 'lateforlunch'.setup({
 ```
 If you want to mix some styles, for example bold and italic, set style value to `'bold italic'`.
 
-For light theme set `vim.opt.background` to `"light"`.
+<!--For light theme set `vim.opt.background` to `"light"`.-->
 
 ## Contributing
-Any PRs or issues regarding highlight fixes/improvements or new plugins are very welcome.
+Any PRs or issues regarding highlight fixes/improvements or new plugins welcome, but I may be slow to respond.
 
 ## Author
 - [chris-montero](https://github.com/chris-montero)
